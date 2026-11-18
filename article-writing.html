@@ -8,18 +8,18 @@
 
         <meta name="ip2loc" content="116.0.59.18">
         <link rel="shortcut icon" type="image/x-icon" href="assets/images/waltz-logo.png">
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=20261113b">
-        <link rel="stylesheet" type="text/css" href="assets/css/style-web.css?v=20261113b">
-        <link rel="stylesheet" type="text/css" href="assets/css/responsive.css?v=20261113b">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=20261119q">
+        <link rel="stylesheet" type="text/css" href="assets/css/style-web.css?v=20261119q">
+        <link rel="stylesheet" type="text/css" href="assets/css/responsive.css?v=20261119q">
 
         <link rel="preconnect" href="https://fonts.googleapis.com/">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link
-            href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap"
+            href="https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Merriweather:wght@300;400;700;900&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap"
             rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css?v=20261113b">
+        <link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css?v=20261119q">
         <link rel="stylesheet" type="text/css"
-            href="assets/css/home-cover-slider.css?v=20261113b">
+            href="assets/css/home-cover-slider.css?v=20261119q">
 
         <title>Article Writing Services | Adams Global Publishers</title>
 <link rel="canonical" href="https://www.adamsglobalpublishers.com/article-writing">
@@ -1117,48 +1117,100 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-        <div style="display: none;" class="spring popupform easter"
-            id="popupform">
-            <div class="custom-pop">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="popup-content">
-                            <h2>Special Offer</h2>
-                            <h3>Avail <span id="percent">50% Off</span>
-                                Today</h3>
-                            <p>on our book writing services</p>
+                <style>/* notepad popup override */
+.spring.easter.notepad-popup,
+.notepad-popup.spring.easter {
+    width: auto !important;
+    height: auto !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    background: transparent !important;
+    background-image: none !important;
+}
+.spring.easter.notepad-popup .popup-content,
+.notepad-popup .popup-content {
+    width: 100% !important;
+    margin: 0 !important;
+    background: transparent !important;
+    border: none !important;
+}
+.spring.easter.notepad-popup .custom-pop { margin: 0 !important; }
+.spring.easter.notepad-popup .popup-content h2 {
+    color: #3d2a1d !important;
+    font-style: normal !important;
+}
+.spring.easter.notepad-popup .popup-content p,
+.notepad-popup .notepad-lead,
+.notepad-popup .notepad-kicker {
+    background: transparent !important;
+}
+.spring.easter.notepad-popup .custom-pop .btn-blue,
+.notepad-popup .notepad-submit {
+    background: linear-gradient(100deg, #0b2a3a 0%, #0f7f93 48%, #15c0e0 100%) !important;
+    color: #fff !important;
+}
+</style>
 
-                            <form
-                                action="sending.php"
-                                method="POST" class="validate-popupform">
-                                <input type="text" class="required form-control"
-                                    required name="cn"
-                                    placeholder="Your Name">
-                                <input type="email"
-                                    class="required form-control" required
-                                    name="em" placeholder="Your Email">
-                                <input type="tel"
-                                    class="required  form-control ftpn" required
-                                    name="pn" minlength="7" maxlength="14"
-                                    placeholder="Phone No.">
-                                <textarea autocomplete="nope" name="msg"
-                                    class="required form-control" required
-                                    placeholder="Enter a brief description about your book"></textarea>
-                                <button type="submit"
-                                    class="btn btn-blue">Submit Now</button>
+                <div style="display: none;" class="spring popupform easter notepad-popup" id="popupform">
+            <div class="notepad-scene">
+                <div class="notepad-back notepad-back--folio" aria-hidden="true">
+                    <span class="folio-edge"></span>
+                    <span class="folio-lines"></span>
+                </div>
+                <div class="notepad-back notepad-back--journal" aria-hidden="true">
+                    <span class="journal-band"></span>
+                    <span class="journal-title">Manuscript</span>
+                </div>
+                <div class="notepad-back notepad-back--pages" aria-hidden="true"></div>
+                <div class="notepad-pad">
+                    <div class="notepad-holes" aria-hidden="true"></div>
+                    <div class="notepad-spiral" aria-hidden="true">
+                        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                    </div>
+                    <div class="custom-pop">
+                        <div class="popup-content">
+                            <p class="notepad-kicker">Adams Global Publishers</p>
+                            <h2>Let&apos;s Publish</h2>
+                            <p class="notepad-lead">Share a few details and we&apos;ll help you publish.</p>
+                            <form action="sending.php" method="POST" class="validate-popupform">
+                                <label class="notepad-field">
+                                    <span>Full name</span>
+                                    <input type="text" class="required form-control" required name="cn" placeholder="Enter your name" autocomplete="name">
+                                </label>
+                                <label class="notepad-field">
+                                    <span>Phone</span>
+                                    <input type="tel" class="required form-control ftpn" required name="pn" minlength="7" maxlength="14" placeholder="Enter your number" autocomplete="tel">
+                                </label>
+                                <label class="notepad-field">
+                                    <span>Email</span>
+                                    <input type="email" class="required form-control" required name="em" placeholder="Enter your email" autocomplete="email">
+                                </label>
+                                <label class="notepad-field">
+                                    <span>About your book</span>
+                                    <textarea autocomplete="off" name="msg" class="required form-control" required placeholder="Genre, idea, or where you are in the process"></textarea>
+                                </label>
+                                <button type="submit" class="btn btn-blue notepad-submit">Start My Publishing Journey</button>
                             </form>
                         </div>
+                    </div>
+                    <div class="notepad-offer-tag" role="status">
+                        <span>Special Offer</span>
+                        <strong id="percent">50% Off</strong>
+                    </div>
+                    <div class="notepad-corner" aria-hidden="true"></div>
+                    <div class="notepad-pens" aria-hidden="true">
+                        <span class="notepad-pen notepad-pen--teal"></span>
                     </div>
                 </div>
             </div>
         </div>
         <!-- <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
-        <script type="text/javascript" src="assets/js/libs.js?v=20261113b"></script>
-         <script type="text/javascript" src="assets/js/functions.js?v=20261113b"></script>
+        <script type="text/javascript" src="assets/js/libs.js?v=20261119q"></script>
+         <script type="text/javascript" src="assets/js/functions.js?v=20261119q"></script>
 
-        <script type="text/javascript" src="assets/js/swiper.min.js?v=20261113b"></script>
+        <script type="text/javascript" src="assets/js/swiper.min.js?v=20261119q"></script>
         <script type="text/javascript"
-            src="assets/js/home-cover-slider.js?v=20261113b"></script>
+            src="assets/js/home-cover-slider.js?v=20261119q"></script>
         <script type="text/javascript">
     $(document).ready(function () {
         // Set current tab to Editing
