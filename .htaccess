@@ -33,6 +33,9 @@ RewriteRule ^home/?$ / [L,R=301]
 # Broken chat script URL -> contact
 RewriteRule ^chat\.html$ /contact-us [L,R=301]
 
+# Book detail pages: /books/<slug> -> book-detail.html
+RewriteRule ^books/([a-z0-9-]+)/?$ book-detail.html [L,QSA]
+
 # Redirect any remaining *.html requests to clean slugs
 RewriteCond %{THE_REQUEST} \s/+([^?\s]*?)\.html[\s?] [NC]
 RewriteRule ^ /%1? [R=301,L]
