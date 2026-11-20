@@ -167,6 +167,7 @@ section.notice-imp svg{
                                 </li>
                                 <li><a href="/packages">Packages</a></li>
                                 <li><a href="/blog">Blog</a></li>
+                                <li><a href="/books">Books</a></li>
                                 <li class="nav-cta"><a href="/contact-us">Contact</a></li>
                             </ul>
                         </nav>
@@ -268,7 +269,7 @@ section.notice-imp svg{
         <div class="container">
             <nav class="bd-crumb" aria-label="Breadcrumb">
                 <a href="/">Home</a><span>/</span>
-                <a href="/#our-books">Our Books</a><span>/</span>
+                <a href="/books">Our Books</a><span>/</span>
                 <span id="bdCrumbTitle">Book</span>
             </nav>
             <div class="bd-layout">
@@ -324,7 +325,7 @@ section.notice-imp svg{
                     <p class="eyebrow">Explore Our Collection</p>
                     <h2>More Books to Discover</h2>
                 </div>
-                <a href="/#our-books">View All Books <i class="fas fa-arrow-right"></i></a>
+                <a href="/books">View All Books <i class="fas fa-arrow-right"></i></a>
             </div>
             <div class="bd-related-grid" id="bdRelated"></div>
         </div>
@@ -344,7 +345,7 @@ section.notice-imp svg{
     <div class="container">
         <h1>Book Not Found</h1>
         <p>The book you are looking for may have moved. Browse our published titles instead.</p>
-        <a href="/#our-books" class="btn btn-green">Browse Our Books <i class="fas fa-caret-right"></i></a>
+        <a href="/books" class="btn btn-green">Browse Our Books <i class="fas fa-caret-right"></i></a>
     </div>
 </section>
 
@@ -398,6 +399,7 @@ section.notice-imp svg{
                             <li><a href="/about-us">About</a></li>
                             <li><a href="/contact-us">Contact</a></li>
                             <li><a href="/blog">Blog</a></li>
+                        <li><a href="/books">Books</a></li>
                         </ul>
                         <a href="https://www.trustpilot.com/review/adamsglobalpublishers.com" target="_blank" rel="noopener" aria-label="Trustpilot reviews"><img src="assets/images/customer-review.webp" alt="Adams Global Publishers on Trustpilot" width="200" height="50" loading="lazy"></a>
                     </div>
@@ -859,41 +861,12 @@ section.notice-imp svg{
         <!-- <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
         <script type="text/javascript" src="assets/js/libs.js?v=20261119q"></script>
          <script type="text/javascript" src="assets/js/functions.js?v=20261119q"></script>
+<script type="text/javascript" src="assets/js/books-data.js?v=20261120a"></script>
 <script type="text/javascript">
 /* Book detail data — slug => /books/<slug> */
 (function () {
     var SITE = "https://www.adamsglobalpublishers.com";
-    var BOOKS = [
-        { slug: "the-black-belt-mindset", title: "The Black Belt Mindset: A Roadmap from Purpose to Legacy", short: "The Black Belt Mindset", author: "Dr. Kimberly Cummings Reyes-Dott", genre: "Self-Help / Leadership", cover: "assets/images/published-books/kimberly-black-mindset.jpg", amazon: "https://www.amazon.com/dp/B0H5M5F1ND",
-          lead: "What if the discipline of a black belt could become the roadmap for your purpose, leadership, and legacy?",
-          desc: ["A roadmap from purpose to legacy that blends Kenpo principles, cognitive behavioral psychology, and organizational development into practical daily actions for leadership and lasting impact.", "Dr. Kimberly Cummings Reyes-Dott connects personal purpose with practical action — presenting an approach to growth, leadership, and creating an impact that outlasts you."] },
-        { slug: "aj-the-earth-boy-and-eq-the-space-boy", title: "AJ the Earth Boy and EQ the Space Boy", short: "AJ the Earth Boy & EQ the Space Boy", author: "Brenda Fox Lucas", genre: "Children’s Fiction", cover: "assets/images/published-books/brenda-aj-earth-boy.jpg", amazon: "https://www.amazon.ca/dp/B0HQLGBMN9",
-          lead: "What happens when a curious boy from Earth meets a young visitor from another planet?",
-          desc: ["An unforgettable adventure and a friendship that reaches beyond the stars. AJ loves exploring the outdoors and counting stars through his telescope — until a friendship begins that spans two worlds.", "A warm, imaginative read for young readers about curiosity, kindness, and the friends we never expected to meet."] },
-        { slug: "the-journey-of-grace", title: "The Journey of Grace: Beyond the Valley", short: "The Journey of Grace", author: "Dr. David Nwanekpe", genre: "Faith / Memoir", cover: "assets/images/published-books/david-journey-grace.jpg", amazon: "https://www.amazon.com/dp/B0HNY3XST3",
-          lead: "What happens when the journey God calls you to follow leads through rejection, hardship, and unanswered prayers?",
-          desc: ["Dr. David Nwanekpe shares his inspiring true-life story of faith, perseverance, and God’s unfailing grace — from financial struggles to difficult missionary assignments and beyond.", "An honest, hope-filled memoir for every reader walking through their own valley."] },
-        { slug: "balance-baby", title: "Balance Baby: A Millennial Woman’s Guide to Navigating Career, Family & Life", short: "Balance Baby", author: "Stacey Nchanji", genre: "Women’s Nonfiction", cover: "assets/images/published-books/stacey-balance-baby.jpg", amazon: "https://www.amazon.com/dp/B0HRHM7X4X",
-          lead: "A practical, encouraging companion for women navigating the demands of working motherhood.",
-          desc: ["Drawing on her experiences as a mother, bonus mom, wife, entrepreneur, and career changer, Stacey Nchanji explores what it takes to build a fulfilling life when responsibilities compete for your attention.", "Balance Baby offers real-life perspective and actionable encouragement for millennial women balancing career, family, and self."] },
-        { slug: "de-un-sueno-a-una-leyenda", title: "De un Sueño a una Leyenda", short: "De un Sueño a una Leyenda", author: "Wladimir Ortega", genre: "Spanish Edition", cover: "assets/images/published-books/wladimir-sueno-leyenda.jpg", amazon: "https://www.amazon.com/dp/B0HRCDCX8W",
-          lead: "An inspiring Spanish-language story of ambition and perseverance.",
-          desc: ["De un Sueño a una Leyenda follows the path of turning a dream into a lasting legend — a story of determination, sacrifice, and belief in what is possible."] },
-        { slug: "the-adventures-of-undercover-brother", title: "The Adventures of Undercover Brother: The Vaughn Warner Files", short: "Undercover Brother", author: "Lavon Warner", genre: "Adventure / Fiction", cover: "assets/images/published-books/lavon-undercover-brother.jpg", amazon: "https://www.amazon.com/dp/B0HRMDP476",
-          lead: "Undercover missions, sharp instincts, and one bold hero.",
-          desc: ["The Adventures of Undercover Brother: The Vaughn Warner Files is a high-energy adventure following undercover missions, sharp instincts, and the bold spirit of Vaughn Warner."] },
-        { slug: "fiction-showcase", title: "Fiction Showcase", short: "Fiction", genre: "Fiction", cover: "assets/images/book1.jpg", desc: ["A polished fiction showcase from our cover and publishing portfolio — crafted to stop the scroll and pull readers into the story."] },
-        { slug: "romance-showcase", title: "Romance Showcase", short: "Romance", genre: "Romance", cover: "assets/images/book2.jpg", desc: ["A romance cover treatment that balances emotion, warmth, and market-ready appeal for modern love stories."] },
-        { slug: "fiction-showcase-2", title: "Fiction Showcase", short: "Fiction", genre: "Fiction", cover: "assets/images/book3.jpg", desc: ["Another fiction showcase highlighting typography, mood, and genre cues that help a novel stand out on shelves and screens."] },
-        { slug: "fantasy-showcase", title: "Fantasy Showcase", short: "Fantasy", genre: "Fantasy", cover: "assets/images/book4.jpg", desc: ["An epic fantasy cover concept built for wonder — rich atmosphere, bold hierarchy, and shelf-stopping presence."] },
-        { slug: "romance-showcase-2", title: "Romance Showcase", short: "Romance", genre: "Romance", cover: "assets/images/book5.jpg", desc: ["A romance portfolio piece with soft drama and clear title focus — designed for discoverability across print and digital."] },
-        { slug: "children-showcase", title: "Children Showcase", short: "Children", genre: "Children", cover: "assets/images/book6.jpg", desc: ["A playful children’s book cover sample that feels inviting, colorful, and age-right for young readers and parents alike."] },
-        { slug: "science-showcase", title: "Science Showcase", short: "Science", genre: "Science", cover: "assets/images/book7.jpg", desc: ["A clean science/nonfiction treatment that signals credibility while staying visually memorable."] },
-        { slug: "memoirs-showcase", title: "Memoirs Showcase", short: "Memoirs", genre: "Memoirs", cover: "assets/images/book8.jpg", desc: ["A memoir-style cover with intimate tone and strong author presence — designed to feel personal and premium."] },
-        { slug: "religious-showcase", title: "Religious Showcase", short: "Religious", genre: "Religious", cover: "assets/images/book9.jpg", desc: ["A faith-forward cover sample with calm authority and clear spiritual positioning for inspirational readers."] },
-        { slug: "romance-showcase-3", title: "Romance Showcase", short: "Romance", genre: "Romance", cover: "assets/images/book10.jpg", desc: ["A second romance showcase demonstrating range across tone, palette, and commercial packaging."] },
-        { slug: "comic-showcase", title: "Comic Showcase", short: "Comic", genre: "Comic", cover: "assets/images/book11.jpg", desc: ["A comic/graphic cover sample packed with energy, punchy composition, and series-ready visual identity."] }
-    ];
+    var BOOKS = window.AGP_BOOKS || [];
 
     function $id(id) { return document.getElementById(id); }
     function setText(id, v) { var el = $id(id); if (el) el.textContent = v; }
